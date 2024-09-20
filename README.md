@@ -64,3 +64,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Steps to run the application
+
+- Download the whole repository from github.
+- extract the Zip file.
+- Make sure to have a docker desktop application installed.
+- Open docker desktop application.
+- Open docker terminal.
+- Move towards the project's root directory.
+- Then run the following command.
+        - docker-compose up --build
+
+- Open another terminal.
+- Move towards the root directory.
+- Run the command "php artisan serve"
+
+- After both the above commands, add third and the last terminal.
+- Run command "npm run dev".
+
+- After all the above steps, the application will start running on localhost:9000.
