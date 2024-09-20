@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* .main_banner_news_sec .inner_section_banner_news {display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows:  repeat(3, 1fr);} */
+
+.main_banner_news_sec {padding: 60px 0; background-color: #f3f3f3}
+.main_banner_news_sec .inner_section_banner_news {grid-template-rows: repeat(3, minmax(0, 180px));}
+.main_banner_news_sec .inner_section_banner_news .single_news:first-child {grid-column-start: 1; grid-column-end: 1; grid-row-start: 1; grid-row-end: 3; height: 100%;}
+.main_banner_news_sec .inner_section_banner_news .single_news:first-child .img_wrapper {height: 418px;}
+.main_banner_news_sec .inner_section_banner_news .single_news:nth-child(n+5) {display: none;}
+.main_banner_news_sec .inner_section_banner_news .single_news:nth-child(4n + 2) {grid-column-start: 2; grid-column-end: 2; grid-row-start: 1; grid-row-end: 1;}
+.main_banner_news_sec .inner_section_banner_news .single_news:nth-child(4n + 3) {grid-column-start: 2; grid-column-end: 2; grid-row-start: 2; grid-row-end: 2;}
+.main_banner_news_sec .inner_section_banner_news .single_news:nth-child(4n + 4) {grid-column-start: 2; grid-column-end: 2; grid-row-start: 3; grid-row-end: 3;}
+
+/* .main_banner_news_sec .inner_section_banner_news .single_news a */
+.main_banner_news_sec .inner_section_banner_news .single_news a .content_main_wrapper {display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px;}
+.main_banner_news_sec .inner_section_banner_news .single_news .article_title h2 {overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;}
+.main_banner_news_sec .inner_section_banner_news .single_news .article_content_wrapper p {overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;}
+.main_banner_news_sec .inner_section_banner_news .single_news:first-child .article_title h2 {font-weight: 700; font-size: 30px;}
+.main_banner_news_sec .inner_section_banner_news .single_news:not(:first-child) .article_title h2 {font-weight: 700; font-size: 24px;}
+.main_banner_news_sec .inner_section_banner_news .single_news .source_author_detail_wrapper {display: flex; gap: 15px; align-items: center;}
+.main_banner_news_sec .inner_section_banner_news .single_news .source_author_detail_wrapper p {color: #ff4500; font-size: 13px; font-weight: 600;}
+.main_banner_news_sec .inner_section_banner_news .single_news .source_author_detail_wrapper p span {margin-right: 10px}
+.main_banner_news_sec .inner_section_banner_news .single_news .img_wrapper {width: 100%; border-radius: 10px; overflow: hidden;}
+.main_banner_news_sec .inner_section_banner_news .single_news .img_wrapper img {width: 100%; height: 100%; object-fit: cover; object-position: center;}
+.main_banner_news_sec .inner_section_banner_news .single_news:not(:first-child) .img_wrapper {height: 180px;}
+.main_banner_news_sec .inner_section_banner_news .single_news:not(:first-child) a {display: flex; gap: 10px;}
+.main_banner_news_sec .inner_section_banner_news .single_news:not(:first-child) a .img_wrapper {flex: 1; flex-shrink: 0;}
+.main_banner_news_sec .inner_section_banner_news .single_news:not(:first-child) a .content_main_wrapper {flex: 1; justify-content: center;; display: flex;}
+
+.search_filter_form {width: 300px; transition: opacity 2s ease-in-out; position: absolute; right: -300px; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: none;}
+.search_filter_form.show{right: 0; display: flex;}
+.search_filter_form button {background-color: #ff4500; display: block; width: 100%; border-radius: 5px; color: white; padding: 8px 0}
+
+/* .search_filter_form .close { color: white; padding: 10px; width: 20px; height: 20px; background-color: #ff4500; display: flex; justify-content: center; align-items: center; border-radius: 3px; position: absolute; right: 20px; top: 0; } */
+
+header .search_btn {background-color: #ff4500;}
+.loadmore_btn_wrapper {text-align: center; margin: 15px 0;}
+.btn_orange_bordered {color: #ff4500; border: 1px solid #ff4500;}
+
+.articles_by_author {padding: 50px 0;}
+
+.articles_by_author h1 {font-size: 30px; font-weight: 700; margin-bottom: 20px;}
+.articles_by_author h2 {font-size: 27px; font-weight: 500;}
+.articles_by_author .article-card a {display: flex; flex-direction: column; gap: 12px}
+.articles_by_author .article-card .article_title h3 {font-size: 22px; font-weight: 500; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; height: 53px;}
+.articles_by_author .article-card .article_description p {overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; height: 48px;}
+.articles_by_author .article-card .publish_date p {color: #ff4500; font-size: 13px; font-weight: 600;}
+
+.articles_by_author .article-card {box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 10px 10px 30px 10px; border-radius: 10px; margin-bottom: 20px;}
+.articles_by_author .article-card .img_wrapper {border-radius: 10px; position: relative; overflow: hidden; height: 250px;}
+.articles_by_author .article-card .img_wrapper img {width: 100%; height: 100%; object-fit: cover; object-position: center;}
+.articles_by_author .article-card .img_wrapper:before {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4)}
+.articles_by_author .article-card .img_wrapper .author_name {position: absolute; color: #fff; right: 0px; bottom: 0; backdrop-filter: blur(10px); background-color: rgba(0,0,0,0.4); width: 100%; height: 40px; text-align: center; display: flex; justify-content: center; align-items: center; padding-left: 10px; padding-right: 10px;}
+.articles_by_author .article-card .img_wrapper .author_name span {font-weight: 700; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; line-clamp: 1; -webkit-box-orient: vertical; }
+
+.articles_by_author .article-card .publish_date {display: flex; gap: 10px;}
+.articles_by_author .article-card .publish_date p span {padding-right: 5px}
+
+
+@media screen and (max-width: 1024px) {
+    .main_banner_news_sec .inner_section_banner_news {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px){
+    .main_banner_news_sec .inner_section_banner_news .single_news:not(:first-child) a {flex-direction: column;}
+}

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laravel-app
+    container_name: laravel_app
+    networks:
+      - app-network
+    user: www-data
+    volumes:
+      - .:/var/www
+
+  web:
+    image: nginx:alpine
+    container_name: nginx_web
+    ports:
+      - "9000:80"
+    volumes:
+      - .:/var/www
+      - ./database:/var/www/database:rw
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  database:
